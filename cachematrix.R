@@ -14,7 +14,7 @@
 ## FUNCTIONS OVERVIEW:
 
 ## makeCacheMatrix():
-## modified from the example `makeVector` code. this function
+## modified from the example `makeVector` code, this function
 ## returns a list of functions to set/get an input matrix,
 ## and set/get the computed inverse (caching by assigning with the 
 ## <<- operator, which assigns the value (here, the cached inverse 
@@ -36,7 +36,8 @@ makeCacheMatrix <- function(x = matrix()) {
 ## cacheSolve():
 ## Also quite close to the example `cachemean` code, this function
 ## "calculates" the inverse of the special matrix we create, initially,
-## by calling makeCacheMatrix() above.
+## by calling makeCacheMatrix() above (meaning, you must call
+## makeCacheMatrix() first. See USAGE EXAMPLE above.
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
